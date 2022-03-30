@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumyajit Shome-Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="MyIntro.html">My Intro</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cv.pdf"target="_blank">C.V.</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="hamburger">
+                <img class="ham" src="ham.png" alt="" width="23px">
+                <img class="cross" src="cross.png" alt="" width="23px">
+            </div>
+            <div class="myIntro">
+                <h2>About Me: </h2>
+                <p>Hi, My name is Soumyajit Shome and I am from Kolkata, W.B. I completed my 10th from St.Sebastian's School and 
+                    12th from St.Joseph and Mary's school, Kolkata and also completed my Graduation in BCA degree from 
+                    Global Group Of Institutions, Haldia, Purba Mednipur. I always have a keen interest in all types of 
+                    programming languages and know many programing languages as well. Apart from studies I also love to listen
+                    to music and watch different smartphone and laptop related content on Youtube. Thank You. 
+                </p>
+                <h2>My Skills: </h2>
+                <div class="skillContainer">
+                     <div class="skillItem">C: <div class="skill t1"></div></div>
+                     <div class="skillItem">C++:<div class="skill t2"></div></div>
+                     <div class="skillItem">HTML:<div class="skill t1"></div></div> 
+                     <div class="skillItem">CSS: <div class="skill t1"></div></div>
+                     <div class="skillItem">JavaScript:<div class="skill t2"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebarGo')
+            if(document.querySelector('.sidebar').classList.contains('sidebarGo')){
+                document.querySelector('.ham').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none';
+            }
+            else{
+                document.querySelector('.ham').style.display = 'none'
+                setTimeout(() => {
+                document.querySelector('.cross').style.display = 'inline'
+            }, 350);
+        }
+    })
+
+    </script>
+</body>
+
+</html>
